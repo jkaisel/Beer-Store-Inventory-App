@@ -1,4 +1,4 @@
-package android.example.shoestoreinventoryapp.screens
+package android.example.shoestoreinventoryapp.screens.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.example.shoestoreinventoryapp.R
 import android.example.shoestoreinventoryapp.databinding.FragmentLoginBinding
+import android.util.Log
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
+    private lateinit var viewModel: LoginViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,6 +22,10 @@ class LoginFragment : Fragment() {
     ): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+
+
         return binding.root
     }
 }
