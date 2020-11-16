@@ -32,22 +32,19 @@ class LoginFragment : Fragment() {
 
         viewModel.eventEmptyFiled.observe(viewLifecycleOwner, Observer { isEmpty ->
             if(isEmpty){
-                binding.tvLoginInfo.text = "Fields email and password cannot be empty"
-                binding.tvLoginInfo.visibility = View.VISIBLE
+                showNotification(1)
             }
         })
 
         viewModel.eventNotAnEmail.observe(viewLifecycleOwner, Observer {notEmail ->
             if(notEmail){
-                binding.tvLoginInfo.text = "Please enter a valid email"
-                binding.tvLoginInfo.visibility = View.VISIBLE
+                showNotification(2)
             }
         })
 
         viewModel.eventUserAlreadyExists.observe(viewLifecycleOwner, Observer { userExists ->
             if(userExists){
-                binding.tvLoginInfo.text = "Email already registered"
-                binding.tvLoginInfo.visibility = View.VISIBLE
+                showNotification(3)
             }
         })
 
@@ -62,7 +59,18 @@ class LoginFragment : Fragment() {
             }
         }
 
-
         return binding.root
+    }
+
+
+    fun showNotification(variant: Int){
+        val info: String
+        when(variant){
+            1 -> info = "Fields email and password cannot be empty"
+            2 -> info = "Please enter a valid email"
+            else -> info = "Fields email and password cannot be empty"
+        }
+        binding.tvLoginInfo.text = info
+        binding.tvLoginInfo.visibility = View.VISIBLE
     }
 }

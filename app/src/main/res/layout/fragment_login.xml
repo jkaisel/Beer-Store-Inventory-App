@@ -74,6 +74,8 @@
             android:id="@+id/tv_login_info"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:lines="2"
+            android:textColor="@android:color/holo_red_dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintHorizontal_bias="0.0"
