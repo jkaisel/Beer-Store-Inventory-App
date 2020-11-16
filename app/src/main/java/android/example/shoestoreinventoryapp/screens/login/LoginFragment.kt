@@ -10,6 +10,7 @@ import android.example.shoestoreinventoryapp.databinding.FragmentLoginBinding
 import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import timber.log.Timber
 
 class LoginFragment : Fragment() {
 
