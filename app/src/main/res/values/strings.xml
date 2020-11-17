@@ -3,20 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome">Welcome!</string>
-    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Vestibulum arcu lacus, elementum non nulla id, convallis mattis dui.
-        Proin ultricies arcu eu bibendum tempor. Suspendisse vel elit lacinia, luctus odio at, finibus urna.
-        Vivamus porta erat lorem, ac mattis ligula tempor id. Maecenas et lobortis nibh.
-        In risus turpis, laoreet eu suscipit eu, mattis at nibh. Duis elementum tempor mattis. In sit amet dictum velit.
-
-        Donec vitae facilisis arcu. Aenean eget tincidunt dolor, eu mattis quam.
-        Curabitur at ipsum sed risus egestas viverra id id nulla. Phasellus in maximus est.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        Nulla sodales, sapien suscipit tempor molestie, felis eros sagittis nunc, quis placerat lacus mi id arcu.
-        Nunc tempus erat et aliquam consequat. Etiam eget dolor erat.
-        Sed molestie, neque placerat auctor mattis, odio ipsum consequat tortor, in vehicula leo lectus sed urna.
-        Quisque in enim nisl. Aliquam malesuada justo varius neque scelerisque, ac tempor elit fringilla.
-        Fusce blandit sed massa aliquam bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-        Nunc condimentum tincidunt lectus ultricies cursus. Donec faucibus elit metus, et feugiat arcu ornare quis. Nunc vehicula lobortis metus a vulputate.</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce metus tortor, lacinia finibus ultrices in, pretium in erat. Aliquam urna lorem, congue ac dictum ac, ultricies ac lacus. Praesent sit amet mi non orci dignissim pellentesque. Duis et ullamcorper nulla, quis bibendum urna. Morbi vitae turpis nec justo aliquet egestas. Cras varius, lorem at mollis pharetra, magna neque dignissim eros, nec interdum purus nisi in libero. Fusce rutrum dui non facilisis posuere. Mauris lacus dolor, vehicula vitae lorem sed, luctus sollicitudin quam.
+        Fusce cursus nisl at elit sodales, at pharetra nisl maximus. Vivamus pellentesque rhoncus suscipit. Integer sit amet turpis sit amet dolor blandit posuere nec et tortor. Nam quis urna sit amet dui hendrerit euismod id vitae lacus. Nam porta ac odio malesuada aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</string>
 
 </resources>
