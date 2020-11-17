@@ -48,6 +48,12 @@ class LoginFragment : Fragment() {
             }
         })
 
+        viewModel.eventIncorrectPassword.observe(viewLifecycleOwner, Observer { isIncorrect ->
+            if(isIncorrect){
+                showNotification(4)
+            }
+        })
+
         binding.btnRegister.setOnClickListener {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
@@ -56,6 +62,15 @@ class LoginFragment : Fragment() {
 
             if(viewModel.checkFields(email, password) && viewModel.checkIfUserDoesntExist(email)){
                 viewModel.addNewUser(email, password)
+                //TODO Navigate
+            }
+        }
+
+        binding.btnLogin.setOnClickListener {
+            val email = binding.etEmail.text.toString()
+            val password = binding.etPassword.text.toString()
+            if(viewModel.checkPassword(email, password)){
+                //TODO Navigate
             }
         }
 
@@ -68,7 +83,8 @@ class LoginFragment : Fragment() {
         when(variant){
             1 -> info = "Fields email and password cannot be empty"
             2 -> info = "Please enter a valid email"
-            else -> info = "Fields email and password cannot be empty"
+            3 -> info = "Fields email and password cannot be empty"
+            else -> info = "Incorrect password or email"
         }
         binding.tvLoginInfo.text = info
         binding.tvLoginInfo.visibility = View.VISIBLE

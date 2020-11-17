@@ -28,12 +28,17 @@ class LoginViewModel : ViewModel() {
     val eventUserAlreadyExists : LiveData<Boolean>
         get() = _eventUserAlreadyExists
 
+    private val _eventIncorrectPassword = MutableLiveData<Boolean>()
+    val eventIncorrectPassword: LiveData<Boolean>
+        get() = _eventIncorrectPassword
+
 
 
     init {
         _eventEmptyField.value = false
         _eventNotAnEmail.value = false
         _eventUserAlreadyExists.value = false
+        _eventIncorrectPassword.value = false
     }
 
 
@@ -66,5 +71,14 @@ class LoginViewModel : ViewModel() {
         _eventEmptyField.value = false
         _eventNotAnEmail.value = false
         _eventUserAlreadyExists.value = false
+    }
+
+    fun checkPassword(email: String, password: String): Boolean {
+        if(userList.getValue(email) != password){
+            _eventIncorrectPassword.value = true
+            return false
+        }
+
+        return true
     }
 }
