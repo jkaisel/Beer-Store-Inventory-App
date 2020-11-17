@@ -7,13 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.example.shoestoreinventoryapp.R
 import android.example.shoestoreinventoryapp.databinding.FragmentLoginBinding
-import android.util.Log
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import timber.log.Timber
+import androidx.navigation.findNavController
 
 class LoginFragment : Fragment() {
 
@@ -62,7 +59,7 @@ class LoginFragment : Fragment() {
 
             if(viewModel.checkFields(email, password) && viewModel.checkIfUserDoesntExist(email)){
                 viewModel.addNewUser(email, password)
-                //TODO Navigate
+                it.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
             }
         }
 
@@ -70,7 +67,7 @@ class LoginFragment : Fragment() {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
             if(viewModel.checkPassword(email, password)){
-                //TODO Navigate
+                it.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
             }
         }
 
