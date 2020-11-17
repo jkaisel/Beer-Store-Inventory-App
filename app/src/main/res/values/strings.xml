@@ -2,4 +2,21 @@
     <string name="app_name">Shoe Store Inventory App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome!</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum arcu lacus, elementum non nulla id, convallis mattis dui.
+        Proin ultricies arcu eu bibendum tempor. Suspendisse vel elit lacinia, luctus odio at, finibus urna.
+        Vivamus porta erat lorem, ac mattis ligula tempor id. Maecenas et lobortis nibh.
+        In risus turpis, laoreet eu suscipit eu, mattis at nibh. Duis elementum tempor mattis. In sit amet dictum velit.
+
+        Donec vitae facilisis arcu. Aenean eget tincidunt dolor, eu mattis quam.
+        Curabitur at ipsum sed risus egestas viverra id id nulla. Phasellus in maximus est.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        Nulla sodales, sapien suscipit tempor molestie, felis eros sagittis nunc, quis placerat lacus mi id arcu.
+        Nunc tempus erat et aliquam consequat. Etiam eget dolor erat.
+        Sed molestie, neque placerat auctor mattis, odio ipsum consequat tortor, in vehicula leo lectus sed urna.
+        Quisque in enim nisl. Aliquam malesuada justo varius neque scelerisque, ac tempor elit fringilla.
+        Fusce blandit sed massa aliquam bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+        Nunc condimentum tincidunt lectus ultricies cursus. Donec faucibus elit metus, et feugiat arcu ornare quis. Nunc vehicula lobortis metus a vulputate.</string>
+
 </resources>
