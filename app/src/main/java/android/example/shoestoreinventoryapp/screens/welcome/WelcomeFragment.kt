@@ -1,4 +1,4 @@
-package android.example.shoestoreinventoryapp.screens.login.welcome
+package android.example.shoestoreinventoryapp.screens.welcome
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
