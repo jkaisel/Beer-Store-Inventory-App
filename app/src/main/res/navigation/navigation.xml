@@ -23,5 +23,13 @@
     <fragment
         android:id="@+id/informationFragment"
         android:name="android.example.shoestoreinventoryapp.screens.information.InformationFragment"
-        android:label="InformationFragment" />
+        android:label="InformationFragment" >
+        <action
+            android:id="@+id/action_informationFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListFragment"
+        android:name="android.example.shoestoreinventoryapp.screens.list.ShoeListFragment"
+        android:label="ShoeListFragment" />
 </navigation>

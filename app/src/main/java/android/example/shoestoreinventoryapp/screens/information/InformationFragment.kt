@@ -9,6 +9,7 @@ import android.example.shoestoreinventoryapp.R
 import android.example.shoestoreinventoryapp.databinding.FragmentInformationBinding
 import android.example.shoestoreinventoryapp.databinding.FragmentWelcomeBinding
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 
 class InformationFragment : Fragment() {
 
@@ -20,6 +21,10 @@ class InformationFragment : Fragment() {
     ): View? {
 
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_information, container, false)
+
+        binding.btnGotIt.setOnClickListener {
+            it.findNavController().navigate(R.id.action_informationFragment_to_shoeListFragment )
+        }
 
 
         return binding.root
