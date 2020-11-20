@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Shoe Store Inventory App"
+rootProject.name = "Beer Store Inventory App"

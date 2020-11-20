@@ -1,8 +1,8 @@
-package android.example.shoestoreinventoryapp.screens.list
+package android.example.beerstoreinventoryapp.screens.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.example.shoestoreinventoryapp.R
+import android.example.beerstoreinventoryapp.R
 import android.view.*
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI

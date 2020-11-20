@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="android.example.shoestoreinventoryapp.screens.login.LoginFragment"
+        android:name="android.example.beerstoreinventoryapp.screens.login.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="android.example.shoestoreinventoryapp.screens.welcome.WelcomeFragment"
+        android:name="android.example.beerstoreinventoryapp.screens.welcome.WelcomeFragment"
         android:label="WelcomeFragment" >
         <action
             android:id="@+id/action_welcomeFragment_to_informationFragment"
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/informationFragment"
-        android:name="android.example.shoestoreinventoryapp.screens.information.InformationFragment"
+        android:name="android.example.beerstoreinventoryapp.screens.information.InformationFragment"
         android:label="InformationFragment" >
         <action
             android:id="@+id/action_informationFragment_to_shoeListFragment"
@@ -30,6 +30,6 @@
     </fragment>
     <fragment
         android:id="@+id/shoeListFragment"
-        android:name="android.example.shoestoreinventoryapp.screens.list.ShoeListFragment"
+        android:name="android.example.beerstoreinventoryapp.screens.list.ShoeListFragment"
         android:label="ShoeListFragment" />
 </navigation>

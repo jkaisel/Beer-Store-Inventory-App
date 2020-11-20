@@ -1,4 +1,4 @@
-package android.example.shoestoreinventoryapp
+package android.example.beerstoreinventoryapp
 
 import org.junit.Test
 

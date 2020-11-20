@@ -1,16 +1,15 @@
-package android.example.shoestoreinventoryapp.screens.login
+package android.example.beerstoreinventoryapp.screens.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.example.shoestoreinventoryapp.R
-import android.example.shoestoreinventoryapp.databinding.FragmentLoginBinding
+import android.example.beerstoreinventoryapp.R
+import android.example.beerstoreinventoryapp.databinding.FragmentLoginBinding
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 
 class LoginFragment : Fragment() {
 
