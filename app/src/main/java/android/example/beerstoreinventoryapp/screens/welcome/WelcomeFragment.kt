@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.example.beerstoreinventoryapp.R
 import android.example.beerstoreinventoryapp.databinding.FragmentWelcomeBinding
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 
 class WelcomeFragment : Fragment() {
 
@@ -21,7 +22,7 @@ class WelcomeFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_welcome, container, false)
 
         binding.btnNext.setOnClickListener {
-            it.findNavController().navigate(R.id.action_welcomeFragment_to_informationFragment)
+            requireView().findNavController().navigate(R.id.action_welcomeFragment_to_informationFragment)
         }
 
         return binding.root
