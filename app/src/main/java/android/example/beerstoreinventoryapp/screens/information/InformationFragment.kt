@@ -1,15 +1,12 @@
-package android.example.shoestoreinventoryapp.screens.information
+package android.example.beerstoreinventoryapp.screens.information
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.example.shoestoreinventoryapp.R
-import android.example.shoestoreinventoryapp.databinding.FragmentInformationBinding
-import android.example.shoestoreinventoryapp.databinding.FragmentWelcomeBinding
+import android.example.beerstoreinventoryapp.R
+import android.example.beerstoreinventoryapp.databinding.FragmentInformationBinding
+import android.example.beerstoreinventoryapp.databinding.FragmentWelcomeBinding
 import android.view.*
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
 
 class InformationFragment : Fragment() {
 

@@ -1,6 +1,6 @@
-package android.example.shoestoreinventoryapp.screens.list
+package android.example.beerstoreinventoryapp.screens.list
 
-import android.example.shoestoreinventoryapp.models.Shoe
+import android.example.beerstoreinventoryapp.models.Shoe
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

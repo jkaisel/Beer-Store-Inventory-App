@@ -1,9 +1,9 @@
-package android.example.shoestoreinventoryapp
+package android.example.beerstoreinventoryapp
 
 import android.app.Application
 import timber.log.Timber
 
-class ShoeApplication: Application() {
+class BeerApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()

@@ -1,4 +1,4 @@
-package android.example.shoestoreinventoryapp
+package android.example.beerstoreinventoryapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

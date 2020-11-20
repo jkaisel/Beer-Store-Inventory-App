@@ -1,11 +1,8 @@
-package android.example.shoestoreinventoryapp
+package android.example.beerstoreinventoryapp
 
-import android.example.shoestoreinventoryapp.databinding.ActivityMainBinding
+import android.example.beerstoreinventoryapp.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*

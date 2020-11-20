@@ -1,14 +1,13 @@
-package android.example.shoestoreinventoryapp.screens.welcome
+package android.example.beerstoreinventoryapp.screens.welcome
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.example.shoestoreinventoryapp.R
-import android.example.shoestoreinventoryapp.databinding.FragmentWelcomeBinding
+import android.example.beerstoreinventoryapp.R
+import android.example.beerstoreinventoryapp.databinding.FragmentWelcomeBinding
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.findNavController
 
 class WelcomeFragment : Fragment() {
 

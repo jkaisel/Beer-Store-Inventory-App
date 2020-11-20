@@ -1,4 +1,4 @@
-package android.example.shoestoreinventoryapp.screens.login
+package android.example.beerstoreinventoryapp.screens.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
