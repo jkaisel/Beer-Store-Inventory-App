@@ -25,11 +25,19 @@
         android:name="android.example.beerstoreinventoryapp.screens.information.InformationFragment"
         android:label="InformationFragment" >
         <action
-            android:id="@+id/action_informationFragment_to_shoeListFragment"
-            app:destination="@id/shoeListFragment" />
+            android:id="@+id/action_informationFragment_to_beerListFragment"
+            app:destination="@id/beerListFragment" />
     </fragment>
     <fragment
-        android:id="@+id/shoeListFragment"
+        android:id="@+id/beerListFragment"
         android:name="android.example.beerstoreinventoryapp.screens.list.BeerListFragment"
-        android:label="ShoeListFragment" />
+        android:label="ShoeListFragment" >
+        <action
+            android:id="@+id/action_beerListFragment_to_beerDetailFragment"
+            app:destination="@id/beerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beerDetailFragment"
+        android:name="android.example.beerstoreinventoryapp.screens.detail.BeerDetailFragment"
+        android:label="BeerDetailFragment" />
 </navigation>
