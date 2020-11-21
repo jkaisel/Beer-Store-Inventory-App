@@ -39,5 +39,9 @@
     <fragment
         android:id="@+id/beerDetailFragment"
         android:name="android.example.beerstoreinventoryapp.screens.detail.BeerDetailFragment"
-        android:label="BeerDetailFragment" />
+        android:label="BeerDetailFragment" >
+        <action
+            android:id="@+id/action_beerDetailFragment_to_beerListFragment"
+            app:destination="@id/beerListFragment" />
+    </fragment>
 </navigation>
