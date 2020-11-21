@@ -7,7 +7,7 @@ import android.view.*
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 
-class ShoeListFragment : Fragment() {
+class BeerListFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -16,7 +16,7 @@ class ShoeListFragment : Fragment() {
 
         setHasOptionsMenu(true )
 
-        return inflater.inflate(R.layout.fragment_shoe_list, container, false)
+        return inflater.inflate(R.layout.fragment_beer_list, container, false)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
