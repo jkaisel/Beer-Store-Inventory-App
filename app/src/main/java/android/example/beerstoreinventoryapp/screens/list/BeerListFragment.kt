@@ -4,15 +4,17 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.example.beerstoreinventoryapp.R
 import android.example.beerstoreinventoryapp.databinding.FragmentBeerListBinding
+import android.example.beerstoreinventoryapp.BeerViewModel
 import android.view.*
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 
 class BeerListFragment : Fragment() {
 
     private lateinit var binding: FragmentBeerListBinding
+    private val viewModel: BeerViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,7 +25,6 @@ class BeerListFragment : Fragment() {
         setHasOptionsMenu(true)
 
         binding.fab.setOnClickListener {
-            Toast.makeText(context, "FAB clicked", Toast.LENGTH_SHORT).show()
             requireView().findNavController().navigate(R.id.action_beerListFragment_to_beerDetailFragment)
         }
 
