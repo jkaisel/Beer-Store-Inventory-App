@@ -38,10 +38,6 @@ class BeerDetailFragment : Fragment() {
             val description = binding.etDescription.text.toString()
 
             viewModel.addBeerToList(Beer(name, abv, type, description))
-            Timber.d("${viewModel.beerList.value}")
-
-            Toast.makeText(context, "${viewModel.beerList.value?.get(0)}", Toast.LENGTH_SHORT)
-
             requireView().findNavController().navigate(R.id.action_beerDetailFragment_to_beerListFragment)
         }
 
