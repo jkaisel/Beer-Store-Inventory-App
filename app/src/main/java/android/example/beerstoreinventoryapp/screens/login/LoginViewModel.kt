@@ -74,7 +74,7 @@ class LoginViewModel : ViewModel() {
 
     fun checkPassword(email: String, password: String): Boolean {
         //TODO: Handle not existing user
-        if(userList.getValue(email) != password || !userList.containsKey(email)){
+        if(!userList.containsKey(email) || userList.getValue(email) != password){
             _eventIncorrectPassword.value = true
             return false
         }

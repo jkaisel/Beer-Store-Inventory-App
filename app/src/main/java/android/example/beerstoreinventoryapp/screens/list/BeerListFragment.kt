@@ -3,20 +3,32 @@ package android.example.beerstoreinventoryapp.screens.list
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.example.beerstoreinventoryapp.R
+import android.example.beerstoreinventoryapp.databinding.FragmentBeerListBinding
+import android.example.beerstoreinventoryapp.BeerViewModel
 import android.view.*
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 
 class BeerListFragment : Fragment() {
+
+    private lateinit var binding: FragmentBeerListBinding
+    private val viewModel: BeerViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        setHasOptionsMenu(true )
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_beer_list, container, false)
+        setHasOptionsMenu(true)
 
-        return inflater.inflate(R.layout.fragment_beer_list, container, false)
+        binding.fab.setOnClickListener {
+            requireView().findNavController().navigate(R.id.action_beerListFragment_to_beerDetailFragment)
+        }
+
+        return binding.root
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
