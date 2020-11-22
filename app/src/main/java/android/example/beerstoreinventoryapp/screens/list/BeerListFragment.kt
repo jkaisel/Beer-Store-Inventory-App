@@ -25,15 +25,14 @@ class BeerListFragment : Fragment() {
 
         viewModel.beerList.observe(viewLifecycleOwner, Observer {newElement ->
             if(viewModel.beerList.value!!.size != 0) {
-                val beerInfo =
-                    StringBuilder().append(viewModel.beerList.value!!.get(viewModel.beerList.value!!.size - 1))
                 val beerTextView = TextView(context)
-                beerTextView.text = beerInfo.toString()
+                beerTextView.text = viewModel.beerList.value!!.get(viewModel.beerList.value!!.size - 1).name
                 binding.shoeListLayout.addView(beerTextView)
             }
         })
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_beer_list, container, false)
+        binding.beerViewModel = viewModel
         setHasOptionsMenu(true)
 
         binding.fab.setOnClickListener {
@@ -51,5 +50,9 @@ class BeerListFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
+
+//    fun createItemTextView(): TextView {
+//
+//    }
 
 }

@@ -26,18 +26,18 @@ class BeerDetailFragment : Fragment() {
     ): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_beer_detail, container, false)
-
+        binding.beerViewModel = viewModel
         binding.btnCancel.setOnClickListener {
             requireView().findNavController().navigate(R.id.action_beerDetailFragment_to_beerListFragment)
         }
 
         binding.btnSave.setOnClickListener {
-            val name = binding.etName.text.toString()
-            val abv = binding.etAbv.text.toString().toDouble()
-            val type = binding.etType.text.toString()
-            val description = binding.etDescription.text.toString()
-
-            viewModel.addBeerToList(Beer(name, abv, type, description))
+//            val name = binding.etName.text.toString()
+//            val abv = binding.etAbv.text.toString().toDouble()
+//            val type = binding.etType.text.toString()
+//            val description = binding.etDescription.text.toString()
+//
+//            viewModel.addBeerToList(Beer(name, abv, type, description))
             requireView().findNavController().navigate(R.id.action_beerDetailFragment_to_beerListFragment)
         }
 
