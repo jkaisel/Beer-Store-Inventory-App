@@ -12,6 +12,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import java.lang.StringBuilder
 
 class BeerListFragment : Fragment() {
 
@@ -26,8 +27,7 @@ class BeerListFragment : Fragment() {
         viewModel.beerList.observe(viewLifecycleOwner, Observer {newElement ->
             if(viewModel.beerList.value!!.size != 0) {
                 val beerTextView = TextView(context)
-                beerTextView.text = viewModel.beerList.value!!.get(viewModel.beerList.value!!.size - 1).name
-                binding.shoeListLayout.addView(beerTextView)
+                binding.shoeListLayout.addView(createBeerTextView())
             }
         })
 
@@ -51,8 +51,17 @@ class BeerListFragment : Fragment() {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
 
-//    fun createItemTextView(): TextView {
-//
-//    }
+    fun createBeerTextView(): TextView {
+        val beerTextView = TextView(context)
+        val beer = viewModel.beerList.value!!.get(viewModel.beerList.value!!.size - 1)
+        val strb = StringBuilder()
+        strb.append(beer.name + "\n")
+        strb.append(beer.type + "\n")
+        strb.append(beer.abv + "\n")
+        strb.append(beer.description + "\n")
+        beerTextView.text = strb.toString()
+
+        return beerTextView
+    }
 
 }

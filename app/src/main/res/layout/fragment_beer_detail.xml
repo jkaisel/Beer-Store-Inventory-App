@@ -101,7 +101,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline_left"
                 app:layout_constraintTop_toBottomOf="@+id/tv_abv"
-                android:text="@={Double.toString(beerViewModel.beer.abv)}"/>
+                android:text="@={beerViewModel.beer.abv}"/>
 
             <TextView
                 android:id="@+id/tv_description"

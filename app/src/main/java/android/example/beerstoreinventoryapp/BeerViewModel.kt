@@ -1,9 +1,6 @@
 package android.example.beerstoreinventoryapp
 
 import android.example.beerstoreinventoryapp.models.Beer
-import android.util.Log
-import androidx.databinding.Bindable
-import androidx.databinding.Observable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -15,17 +12,29 @@ class BeerViewModel: ViewModel() {
     val beerList: LiveData<MutableList<Beer>>
         get() = _beerList
 
-    val _beer = MutableLiveData<Beer>()
+    private val _beer = MutableLiveData<Beer>()
     val beer : LiveData<Beer>
         get() = _beer
 
+    private val _eventNavigateToList = MutableLiveData<Boolean>()
+    val eventNavigateToList: LiveData<Boolean>
+        get() = _eventNavigateToList
+
     init {
         _beerList.value = mutableListOf()
-        _beer.value = Beer("",0.0,"","")
+        _beer.value = Beer("","","","")
     }
 
     fun addBeerToList() {
         _beerList.value!!.add(beer.value!!)
-        Timber.i(_beer.value!!.name)
+        _eventNavigateToList.value = true
     }
+
+    fun onNavigateComplete(){
+        _eventNavigateToList.value = false
+    }
+
+//    fun resetShoeForm() {
+//        _
+//    }
 }
