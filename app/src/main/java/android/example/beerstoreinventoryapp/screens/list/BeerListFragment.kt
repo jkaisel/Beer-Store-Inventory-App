@@ -26,7 +26,7 @@ class BeerListFragment : Fragment() {
 
         viewModel.beerList.observe(viewLifecycleOwner, Observer {newElement ->
             if(viewModel.beerList.value!!.size != 0) {
-                val beerTextView = TextView(context)
+                //val beerTextView = TextView(context)
                 binding.shoeListLayout.addView(createBeerTextView())
             }
         })
@@ -52,13 +52,13 @@ class BeerListFragment : Fragment() {
     }
 
     fun createBeerTextView(): TextView {
-        val beerTextView = TextView(context)
+        val beerTextView = TextView(context, null, 0, R.style.listElement)
         val beer = viewModel.beerList.value!!.get(viewModel.beerList.value!!.size - 1)
         val strb = StringBuilder()
         strb.append(beer.name + "\n")
         strb.append(beer.type + "\n")
         strb.append(beer.abv + "\n")
-        strb.append(beer.description + "\n")
+        strb.append(beer.description)
         beerTextView.text = strb.toString()
 
         return beerTextView

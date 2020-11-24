@@ -23,15 +23,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:textStyle="bold"
-                    android:textSize="24sp"
-                    android:padding="30dp"
-                    android:background="@drawable/textview_border"
-                    android:text="Primator Weizen" />
+
 
 
             </LinearLayout>

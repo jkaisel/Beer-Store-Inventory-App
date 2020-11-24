@@ -28,13 +28,14 @@ class BeerViewModel: ViewModel() {
     fun addBeerToList() {
         _beerList.value!!.add(beer.value!!)
         _eventNavigateToList.value = true
+        resetShoeForm()
     }
 
     fun onNavigateComplete(){
         _eventNavigateToList.value = false
     }
 
-//    fun resetShoeForm() {
-//        _
-//    }
+    fun resetShoeForm() {
+        _beer.value = Beer("","","","")
+    }
 }

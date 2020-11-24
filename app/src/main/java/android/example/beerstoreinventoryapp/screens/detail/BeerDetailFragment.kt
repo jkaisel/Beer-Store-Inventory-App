@@ -36,6 +36,7 @@ class BeerDetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_beer_detail, container, false)
         binding.beerViewModel = viewModel
         binding.btnCancel.setOnClickListener {
+            viewModel.resetShoeForm()
             requireView().findNavController().navigate(R.id.action_beerDetailFragment_to_beerListFragment)
         }
 
