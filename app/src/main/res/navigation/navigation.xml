@@ -18,20 +18,22 @@
         android:label="WelcomeFragment" >
         <action
             android:id="@+id/action_welcomeFragment_to_informationFragment"
-            app:destination="@id/informationFragment" />
+            app:destination="@id/instructionsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/informationFragment"
+        android:id="@+id/instructionsFragment"
         android:name="android.example.beerstoreinventoryapp.screens.information.InformationFragment"
-        android:label="InformationFragment" >
+        android:label="InnstructionsFragment">
         <action
             android:id="@+id/action_informationFragment_to_beerListFragment"
-            app:destination="@id/beerListFragment" />
+            app:destination="@id/beerListFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/beerListFragment"
         android:name="android.example.beerstoreinventoryapp.screens.list.BeerListFragment"
-        android:label="ShoeListFragment" >
+        android:label="BeerListFragment">
         <action
             android:id="@+id/action_beerListFragment_to_beerDetailFragment"
             app:destination="@id/beerDetailFragment" />

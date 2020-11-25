@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="beerViewModel"
+            type="android.example.beerstoreinventoryapp.BeerViewModel" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -46,7 +52,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline_right"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline_left"
-                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                android:text="@={beerViewModel.beer.name}"/>
 
             <TextView
                 android:id="@+id/tv_type"
@@ -69,7 +76,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline_right"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline_left"
-                app:layout_constraintTop_toBottomOf="@+id/tv_type" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_type"
+                android:text="@={beerViewModel.beer.type}"/>
 
             <TextView
                 android:id="@+id/tv_abv"
@@ -88,10 +96,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
+                android:inputType="numberDecimal"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_right"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline_left"
-                app:layout_constraintTop_toBottomOf="@+id/tv_abv" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_abv"
+                android:text="@={beerViewModel.beer.abv}"/>
 
             <TextView
                 android:id="@+id/tv_description"
@@ -113,7 +123,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline_right"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline_left"
-                app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                android:text="@={beerViewModel.beer.description}"/>
 
             <Button
                 android:id="@+id/btn_cancel"
@@ -133,6 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save"
+                android:onClick="@{() -> beerViewModel.addBeerToList()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"

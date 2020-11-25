@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import timber.log.Timber
 
 class BeerDetailFragment : Fragment() {
@@ -25,19 +26,17 @@ class BeerDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        viewModel.eventNavigateToList.observe(viewLifecycleOwner, { shouldNavigate ->
+            if (shouldNavigate) {
+                findNavController().navigate(R.id.action_beerDetailFragment_to_beerListFragment)
+                viewModel.onNavigateComplete()
+            }
+        })
+
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_beer_detail, container, false)
-
+        binding.beerViewModel = viewModel
         binding.btnCancel.setOnClickListener {
-            requireView().findNavController().navigate(R.id.action_beerDetailFragment_to_beerListFragment)
-        }
-
-        binding.btnSave.setOnClickListener {
-            val name = binding.etName.text.toString()
-            val abv = binding.etAbv.text.toString().toDouble()
-            val type = binding.etType.text.toString()
-            val description = binding.etDescription.text.toString()
-
-            viewModel.addBeerToList(Beer(name, abv, type, description))
+            viewModel.resetShoeForm()
             requireView().findNavController().navigate(R.id.action_beerDetailFragment_to_beerListFragment)
         }
 

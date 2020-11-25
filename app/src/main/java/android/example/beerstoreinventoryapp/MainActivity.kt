@@ -13,8 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
-//        val model: BeerViewModel by viewModels()
-
         val navController = this.findNavController(R.id.myNavHostFragment)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
 
