@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.example.beerstoreinventoryapp.R
 import android.example.beerstoreinventoryapp.databinding.FragmentBeerListBinding
 import android.example.beerstoreinventoryapp.BeerViewModel
+import android.example.beerstoreinventoryapp.models.Beer
 import android.view.*
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
@@ -24,10 +25,9 @@ class BeerListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        viewModel.beerList.observe(viewLifecycleOwner, Observer {newElement ->
-            if(viewModel.beerList.value!!.size != 0) {
-                //val beerTextView = TextView(context)
-                binding.shoeListLayout.addView(createBeerTextView())
+        viewModel.beerList.observe(viewLifecycleOwner, Observer {beerList ->
+            for (beer in beerList){
+                binding.shoeListLayout.addView(createBeerTextView(beer))
             }
         })
 
@@ -51,16 +51,14 @@ class BeerListFragment : Fragment() {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
 
-    fun createBeerTextView(): TextView {
+    fun createBeerTextView(beer: Beer): TextView {
         val beerTextView = TextView(context, null, 0, R.style.listElement)
-        val beer = viewModel.beerList.value!!.get(viewModel.beerList.value!!.size - 1)
         val strb = StringBuilder()
         strb.append(beer.name + "\n")
         strb.append(beer.type + "\n")
         strb.append(beer.abv + "\n")
         strb.append(beer.description)
         beerTextView.text = strb.toString()
-
         return beerTextView
     }
 
