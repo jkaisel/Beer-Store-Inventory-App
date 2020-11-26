@@ -44,13 +44,13 @@
         <Button
             android:id="@+id/btn_got_it"
             style="@style/button_style"
+            android:backgroundTint="@color/pastel_orange"
             android:text="@string/got_it_btn_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/tv_instructions"
-            app:layout_constraintVertical_bias="0.16000003"
-            android:backgroundTint="@color/pastel_orange" />
+            app:layout_constraintVertical_bias="0.16000003" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

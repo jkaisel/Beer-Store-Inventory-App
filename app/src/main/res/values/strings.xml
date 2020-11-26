@@ -12,4 +12,9 @@
     <string name="register_btn_text">Register</string>
     <string name="next_btn_text">Next</string>
     <string name="got_it_btn_text">Got it</string>
+    <string name="name_label">Name</string>
+    <string name="type_text">Type</string>
+    <string name="alcohol_by_volume_text">Alcohol by volume</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="save_text">Save</string>
 </resources>
