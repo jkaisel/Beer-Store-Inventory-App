@@ -1,9 +1,13 @@
 <resources>
-    <string name="app_name">Shoe Store Inventory App</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Beer Store Inventory App</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome">Welcome!</string>
-    <string name="Instructions">Instructions</string>
-    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce metus tortor, lacinia finibus ultrices in, pretium in erat. Aliquam urna lorem, congue ac dictum ac, ultricies ac lacus. Praesent sit amet mi non orci dignissim pellentesque. Duis et ullamcorper nulla, quis bibendum urna. Morbi vitae turpis nec justo aliquet egestas. Cras varius, lorem at mollis pharetra, magna neque dignissim eros, nec interdum purus nisi in libero. Fusce rutrum dui non facilisis posuere. Mauris lacus dolor, vehicula vitae lorem sed, luctus sollicitudin quam.</string>
-
+    <string name="welcome_description">The Beer Store app is dedicated to help you store information about your favorite beers. Proceed to the next screen to view the instructions on how to use the application. </string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_description">Add a beers with their details and enjoy your very own beer database presented in a list!</string>
+    <string name="sign_in_header">Please sign in or register</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="login_btn_text">Login</string>
+    <string name="register_btn_text">Register</string>
 </resources>

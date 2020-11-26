@@ -6,15 +6,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/loginConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#EEDEC6">
 
         <TextView
             android:id="@+id/tv_header_welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/header_margin_top"
+            android:fontFamily="@font/special_elite"
             android:text="@string/welcome"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textAppearance="@style/header_style"
             app:layout_constraintBottom_toTopOf="@+id/tv_description"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
@@ -25,7 +27,8 @@
             android:id="@+id/tv_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/description"
+            android:fontFamily="@font/special_elite"
+            android:text="@string/welcome_description"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintHorizontal_bias="0.0"
@@ -56,6 +59,8 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/tv_description"
+            android:background="@drawable/button_border"
+            android:backgroundTint="@color/mauve"
             app:layout_constraintVertical_bias="0.16000003" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

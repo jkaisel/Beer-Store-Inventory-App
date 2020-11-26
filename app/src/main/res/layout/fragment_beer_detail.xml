@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EEDEC6">
 
     <data>
         <variable
@@ -23,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Add a new beer"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textAppearance="@style/header_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_right"
                 app:layout_constraintStart_toStartOf="@+id/guideline_left"
@@ -137,7 +138,10 @@
                 app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/btn_save"
-                app:layout_constraintVertical_bias="0.19999999" />
+                app:layout_constraintVertical_bias="0.2"
+                android:background="@drawable/button_border"
+                android:backgroundTint="@color/light_gray"
+                android:textAllCaps="false"/>
 
             <Button
                 android:id="@+id/btn_save"
@@ -149,7 +153,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/btn_cancel"
-                app:layout_constraintTop_toBottomOf="@+id/et_description" />
+                app:layout_constraintTop_toBottomOf="@+id/et_description"
+                android:textAllCaps="false"
+                android:background="@drawable/button_border"
+                android:backgroundTint="@color/mauve"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline_left"

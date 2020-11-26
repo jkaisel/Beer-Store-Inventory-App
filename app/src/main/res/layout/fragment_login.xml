@@ -11,12 +11,8 @@
 
         <TextView
             android:id="@+id/tv_header_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/header_margin_top"
-            android:layout_marginBottom="32dp"
-            android:text="Please sign in or register"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            style="@style/header_style"
+            android:text="@string/sign_in_header"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
@@ -25,10 +21,8 @@
 
         <TextView
             android:id="@+id/tv_email_label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/tv_margin_bottom"
-            android:text="Email"
+            style="@style/text_label_style"
+            android:text="@string/email_label"
             app:layout_constraintBottom_toTopOf="@+id/et_email"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintHorizontal_bias="0.0"
@@ -50,10 +44,8 @@
 
         <TextView
             android:id="@+id/tv_password_label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/tv_margin_bottom"
-            android:text="Password"
+            style="@style/text_label_style"
+            android:text="@string/password_label"
             app:layout_constraintBottom_toTopOf="@+id/et_password"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
@@ -72,10 +64,7 @@
 
         <TextView
             android:id="@+id/tv_login_info"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:lines="2"
-            android:textColor="@android:color/holo_red_dark"
+            style="@style/warning_label_style"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintHorizontal_bias="0.0"
@@ -99,32 +88,26 @@
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="Login"
+            style="@style/button_style"
+            android:backgroundTint="@color/mauve"
+            android:text="@string/login_btn_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_register"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/tv_login_info"
-            app:layout_constraintVertical_bias="0.109"
-            android:background="@drawable/button_border"
-            android:backgroundTint="#B89561"/>
+            app:layout_constraintVertical_bias="0.109" />
 
         <Button
             android:id="@+id/btn_register"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="Register"
+            style="@style/button_style"
+            android:backgroundTint="@color/pastel_orange"
+            android:text="@string/register_btn_text"
             app:layout_constraintEnd_toStartOf="@+id/guideline_right"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/btn_login"
-            app:layout_constraintTop_toTopOf="@+id/btn_login"
-            android:background="@drawable/button_border"
-            android:backgroundTint="#EBBF7C"
-            />
+            app:layout_constraintTop_toTopOf="@+id/btn_login" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
