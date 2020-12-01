@@ -1,4 +1,4 @@
-package android.example.beerstoreinventoryapp.screens.welcome
+package android.example.beerstoreinventoryapp.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,9 +22,11 @@ class WelcomeFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_welcome, container, false)
 
         binding.btnNext.setOnClickListener {
-            requireView().findNavController().navigate(R.id.action_welcomeFragment_to_informationFragment)
+            requireView().findNavController().navigate(R.id.action_welcomeFragment_to_instructionsFragment)
         }
 
         return binding.root
     }
+
+
 }

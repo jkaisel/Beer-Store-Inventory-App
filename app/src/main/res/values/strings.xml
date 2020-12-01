@@ -17,4 +17,5 @@
     <string name="alcohol_by_volume_text">Alcohol by volume</string>
     <string name="cancel_text">Cancel</string>
     <string name="save_text">Save</string>
+    <string name="empty_fields_info">Please fill all fields</string>
 </resources>

@@ -1,4 +1,4 @@
-package android.example.beerstoreinventoryapp.screens.detail
+package android.example.beerstoreinventoryapp.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,14 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.example.beerstoreinventoryapp.R
 import android.example.beerstoreinventoryapp.databinding.FragmentBeerDetailBinding
-import android.example.beerstoreinventoryapp.models.Beer
-import android.example.beerstoreinventoryapp.BeerViewModel
-import android.widget.Toast
+import android.example.beerstoreinventoryapp.viewmodels.BeerViewModel
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import timber.log.Timber
 
 class BeerDetailFragment : Fragment() {
 
@@ -25,6 +23,14 @@ class BeerDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        viewModel.eventEmptyField.observe(viewLifecycleOwner, Observer { isEmpty ->
+            if(isEmpty) {
+                showNotification()
+            } else{
+                binding.tvInputInfo.visibility = View.INVISIBLE
+            }
+        })
 
         viewModel.eventNavigateToList.observe(viewLifecycleOwner, { shouldNavigate ->
             if (shouldNavigate) {
@@ -41,5 +47,10 @@ class BeerDetailFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    fun showNotification() {
+        binding.tvInputInfo.text = getString(R.string.empty_fields_info)
+        binding.tvInputInfo.visibility = View.VISIBLE
     }
 }
