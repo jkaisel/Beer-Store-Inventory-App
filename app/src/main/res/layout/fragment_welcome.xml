@@ -2,6 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--    Constraint Layout was used to obtain more flexibility in the UI and have a flatter view hierarchy-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/loginConstraint"
         style="@style/background_style">

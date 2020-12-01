@@ -10,7 +10,11 @@
             type="android.example.beerstoreinventoryapp.viewmodels.BeerViewModel" />
     </data>
 
+<!--    ScrollView was used in case provided description would be couple of lines long and that could push down the buttons out of the screen-->
+
     <ScrollView style="@style/background_style">
+
+        <!--    Constraint Layout was used to obtain more flexibility in the UI and have a flatter view hierarchy-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -134,11 +138,6 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline_right"
                 app:layout_constraintStart_toEndOf="@+id/btn_cancel"
                 app:layout_constraintTop_toBottomOf="@+id/tv_input_info" />
-
-            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--            app:layout_constraintEnd_toStartOf="@+id/guideline_right"-->
-            <!--            app:layout_constraintHorizontal_bias="1.0"-->
-            <!--            app:layout_constraintStart_toStartOf="@+id/guideline_left"-->
 
             <TextView
                 android:id="@+id/tv_input_info"
