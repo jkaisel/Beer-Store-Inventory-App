@@ -1,4 +1,4 @@
-package android.example.beerstoreinventoryapp.screens.information
+package android.example.beerstoreinventoryapp.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -20,7 +20,7 @@ class InstructionsFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_instructions, container, false)
 
         binding.btnGotIt.setOnClickListener {
-            requireView().findNavController().navigate(R.id.action_informationFragment_to_beerListFragment )
+            requireView().findNavController().navigate(R.id.action_instructionsFragment_to_beerListFragment )
         }
 
         return binding.root

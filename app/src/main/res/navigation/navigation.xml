@@ -6,30 +6,32 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="android.example.beerstoreinventoryapp.screens.login.LoginFragment"
+        android:name="android.example.beerstoreinventoryapp.views.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment"
             app:enterAnim="@anim/fade_in"
-            app:exitAnim="@anim/fade_out" />
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="android.example.beerstoreinventoryapp.screens.welcome.WelcomeFragment"
+        android:name="android.example.beerstoreinventoryapp.views.WelcomeFragment"
         android:label="WelcomeFragment" >
         <action
-            android:id="@+id/action_welcomeFragment_to_informationFragment"
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
             app:destination="@id/instructionsFragment"
             app:enterAnim="@anim/slide_in_up"
             app:exitAnim="@anim/slide_out_up" />
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
-        android:name="android.example.beerstoreinventoryapp.screens.information.InstructionsFragment"
+        android:name="android.example.beerstoreinventoryapp.views.InstructionsFragment"
         android:label="InstructionsFragment">
         <action
-            android:id="@+id/action_informationFragment_to_beerListFragment"
+            android:id="@+id/action_instructionsFragment_to_beerListFragment"
             app:destination="@id/beerListFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -38,22 +40,24 @@
     </fragment>
     <fragment
         android:id="@+id/beerListFragment"
-        android:name="android.example.beerstoreinventoryapp.screens.list.BeerListFragment"
+        android:name="android.example.beerstoreinventoryapp.views.BeerListFragment"
         android:label="BeerListFragment">
         <action
             android:id="@+id/action_beerListFragment_to_beerDetailFragment"
             app:destination="@id/beerDetailFragment"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left" />
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/beerListFragment" />
     </fragment>
     <fragment
         android:id="@+id/beerDetailFragment"
-        android:name="android.example.beerstoreinventoryapp.screens.detail.BeerDetailFragment"
+        android:name="android.example.beerstoreinventoryapp.views.BeerDetailFragment"
         android:label="BeerDetailFragment" >
         <action
             android:id="@+id/action_beerDetailFragment_to_beerListFragment"
             app:destination="@id/beerListFragment"
             app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right" />
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/instructionsFragment" />
     </fragment>
 </navigation>

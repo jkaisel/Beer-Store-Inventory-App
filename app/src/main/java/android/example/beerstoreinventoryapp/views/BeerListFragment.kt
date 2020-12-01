@@ -1,10 +1,10 @@
-package android.example.beerstoreinventoryapp.screens.list
+package android.example.beerstoreinventoryapp.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.example.beerstoreinventoryapp.R
 import android.example.beerstoreinventoryapp.databinding.FragmentBeerListBinding
-import android.example.beerstoreinventoryapp.BeerViewModel
+import android.example.beerstoreinventoryapp.viewmodels.BeerViewModel
 import android.example.beerstoreinventoryapp.models.Beer
 import android.view.*
 import android.widget.TextView
@@ -61,5 +61,4 @@ class BeerListFragment : Fragment() {
         beerTextView.text = strb.toString()
         return beerTextView
     }
-
 }

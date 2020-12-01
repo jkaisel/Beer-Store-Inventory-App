@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="beerViewModel"
-            type="android.example.beerstoreinventoryapp.BeerViewModel" />
+            type="android.example.beerstoreinventoryapp.viewmodels.BeerViewModel" />
     </data>
 
     <ScrollView style="@style/background_style">
@@ -117,27 +118,40 @@
             <Button
                 android:id="@+id/btn_cancel"
                 style="@style/button_style"
-                android:layout_marginBottom="16dp"
                 android:backgroundTint="@color/light_gray"
                 android:text="@string/cancel_text"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/btn_save"
-                app:layout_constraintHorizontal_bias="0.2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btn_save"
-                app:layout_constraintVertical_bias="0.2" />
+                app:layout_constraintStart_toStartOf="@+id/guideline_left"
+                app:layout_constraintTop_toTopOf="@+id/btn_save" />
 
             <Button
                 android:id="@+id/btn_save"
                 style="@style/button_style"
+                android:layout_marginTop="16dp"
                 android:backgroundTint="@color/mauve"
                 android:onClick="@{() -> beerViewModel.addBeerToList()}"
                 android:text="@string/save_text"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_right"
                 app:layout_constraintStart_toEndOf="@+id/btn_cancel"
-                app:layout_constraintTop_toBottomOf="@+id/et_description" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_input_info" />
+
+            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--            app:layout_constraintEnd_toStartOf="@+id/guideline_right"-->
+            <!--            app:layout_constraintHorizontal_bias="1.0"-->
+            <!--            app:layout_constraintStart_toStartOf="@+id/guideline_left"-->
+
+            <TextView
+                android:id="@+id/tv_input_info"
+                style="@style/warning_label_style"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@+id/et_description"
+                app:layout_constraintVertical_bias="0.0" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline_left"

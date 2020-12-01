@@ -5,8 +5,10 @@
     <data>
         <variable
             name="beerViewModel"
-            type="android.example.beerstoreinventoryapp.BeerViewModel" />
+            type="android.example.beerstoreinventoryapp.viewmodels.BeerViewModel" />
     </data>
+
+<!--    Used ConstraintLayout to store ScrollView and FAB in one place-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/background_style">
@@ -14,6 +16,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+<!--Used LinearLayout since all I wanted to do is display one item after another-->
 
             <LinearLayout
                 android:id="@+id/shoe_list_layout"
